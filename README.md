@@ -1,28 +1,4 @@
-# ORM Mapping Classes to Tables Lab
-
-## Objectives
-
-1. Write a class that is mapped, or equated, to a database table. 
-2. Build a method that creates a table that maps to the given class. 
-3. Write a method that drops that table. 
-4. Write a method that saves a given instance to the database table. 
-5. Write a method that both creates a new instance of the class *and* saves that instance to a database table. 
-
-## Overview
-
-Let's say we're building an app to help a public school's administrators keep track of their students. In this app we have a `Student` class. Each individual student will have two attributes, a `name` and a `grade`, i.e. 9th, 10th, 11th, etc. 
-
-Our administrators need to save the student objects that this class produces to a database. We've set up the database for you in the `config/environment.rb` file. 
-
-Let's take a look:
-
-```ruby
-require 'sqlite3'
-require_relative '../lib/student'
-
-DB = {:conn => SQLite3::Database.new("db/students.db")}
-```
-Your connection to the database can be referred to, throughout your program, like this: `DB[:conn]`. 
+our connection to the database can be referred to, throughout your program, like this: `DB[:conn]`. 
 
 Your job is to build out the `Student` class such that it has the two attributes described above. You'll also need to build a class method on the `Student` class that creates the students table in the database, a method that can drop that table and a method, `#save`, that can save the data concerning an individual student object to the database. 
 
